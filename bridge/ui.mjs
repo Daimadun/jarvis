@@ -169,11 +169,13 @@ const reactorSchema = {
       'and up reads as effort.',
   ),
   style: z
-    .enum(['ring', 'sphere', 'wire'])
+    .enum(['neural', 'ring', 'sphere', 'wire'])
     .optional()
     .catch(undefined)
     .describe(
-      'ring = the stock arc-reactor halo. sphere = a solid core, heavier and ' +
+      'neural = the default: a neural globe in a voice spectrum ring with instrument rings ' +
+        '(say "Mark I" or "neural" to return to it). ' +
+        'ring = the stock arc-reactor halo. sphere = a solid core, heavier and ' +
         'more present, good when you are the subject of the conversation. ' +
         'wire = a skeletal lattice, good for diagnostics, degraded states, and ' +
         'anything that should look like it is being taken apart.',

@@ -1898,3 +1898,26 @@ kbd {
   transform: scaleX(-1);
   background: #000;
 }
+
+/* ---------------------------------------------------------------------------
+   Neural reactor (jarvis-tools HUD) and the live data rail
+   --------------------------------------------------------------------------- */
+.neural-hud { pointer-events: none; }
+
+.live-rail {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  max-width: 220px;
+}
+.live-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.25;
+}
+.live-label { font-size: 8px; letter-spacing: 0.28em; opacity: 0.45; }
+.live-value { font-size: 10px; letter-spacing: 0.06em; text-align: right; }
+.live-item.warn .live-value { color: #ff5a5a; }

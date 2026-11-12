@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { LiveRail } from './LiveRail'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { useStore, accentFor, type Phase } from '../store'
 import { Suggestions } from './Suggestions'
@@ -232,6 +233,7 @@ export function Hud() {
           <div className="meter-fill" style={{ transform: `scaleY(${level})` }} />
         </div>
         <div className="rail-item mono">{(level * 100).toFixed(0).padStart(3, '0')}%</div>
+        <LiveRail />
       </aside>
 
       <AnimatePresence>

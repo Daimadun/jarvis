@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Scene } from './scene/Scene'
+import { NeuralHud } from './scene/NeuralHud'
 import { Hud } from './ui/Hud'
 import { Boot } from './ui/Boot'
 import { Ignition } from './ui/Ignition'
@@ -697,9 +698,11 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const reactorStyle = useStore((s) => s.ui.reactor.style)
+
   return (
     <>
-      <Scene />
+      {reactorStyle === 'neural' ? <NeuralHud /> : <Scene />}
       <Hud />
       <Boot />
       <Diagnostics />

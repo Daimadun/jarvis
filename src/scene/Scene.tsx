@@ -104,7 +104,7 @@ function aim(tint: Tint, css: string): THREE.Color {
   return tint.color
 }
 
-const STYLE_INDEX = { ring: 0, sphere: 1, wire: 2 } as const
+const STYLE_INDEX = { ring: 0, sphere: 1, wire: 2, neural: 0 } as const
 
 function Rig() {
   const drive = useMemo<Drive>(
